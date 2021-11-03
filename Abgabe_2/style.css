@@ -1,0 +1,265 @@
+/* Allgemein */
+
+body {
+    background-color: lightgray; 
+     width: 800px;
+ }
+
+ header {
+    width: 800px;
+    position: fixed;
+    z-index: 1;
+    margin: 0 auto;
+}
+ 
+ #container {
+     background-color: lightgray;
+     width: 800px;
+     margin: 0 auto;
+     padding: 0;
+ }
+
+ main {
+    background-color: lightgray;
+    width: 800px;
+    margin: 0 auto;
+    padding: 0;
+ }
+ 
+ h1 {
+    color: black;
+    font-family: 'Lobster', cursive;
+}
+
+div h2 {
+    color: black;
+    font-family: 'Lobster', cursive;
+}
+
+div > h3 {
+   color: black;
+   font-family: 'Lobster', cursive;
+}
+ 
+ #startseite {
+     font-family: 'Times New Roman';
+     text-align: center;
+     padding: 25px 50px 50px 25px;
+ }
+  
+ #eventseite {
+     font-family: 'Times New Roman';
+     text-align: center;
+     padding: 25px 50px 50px 25px;
+ }
+ 
+     /* Navigationsleiste */
+ nav {
+     width: 800px;
+     position: fixed;
+     background-color: silver;
+
+ }
+ 
+ #name {
+     position: absolute;
+     padding-left: 50px;
+     float: left;
+     font-family: 'Alfa Slab One', cursive;
+     color: crimson;
+     font-size: x-large; 
+ }
+ 
+ span {
+     color:black;
+ }
+ 
+ ul {
+     width: auto;
+     float: right;
+     margin-top: 8px;
+ }
+ 
+ ol {
+     display: block;
+     list-style-type: decimal;
+     margin-top: 1em;
+     margin-bottom: 1em;
+     margin-left: 0;
+     margin-right: 0;
+     padding-left: 40px;
+ }
+ 
+ li {
+     list-style-type: none;   
+     display: inline-block;
+     padding: 15px 30px;
+ }
+ 
+ .crimson {
+     color: crimson;
+ }
+ 
+ a {
+     color: white;
+     text-align: center;
+     font-family: 'Times New Roman';
+     font-size: 1.2vw;
+ }
+ 
+ a:link {
+     text-decoration: none;
+     font-size: 18px;
+ }
+ 
+ a:hover {
+     color: red;
+     transition: 0.5s;
+ }
+ 
+ footer { 
+     padding-left: 550px;
+ }
+ 
+     /* Social media icons */
+ .fa {
+   padding: 20px;
+   font-size: 20px;
+   width: 20px;
+   text-align: center;
+   text-decoration: none;
+   border-radius: 50%;
+ }
+ 
+ 
+ .fa:hover {
+   opacity: 0.3;
+ }
+ 
+ .fa-facebook {
+   background: white;
+   color: crimson;
+ }
+ 
+ .fa-instagram {
+   background: white;
+   color: crimson;
+ }
+ 
+ .fa-envelope {
+     background: white;
+     color: crimson;
+ }
+ 
+  /* Tabelle */
+  table {
+     border: 0px;
+     display: inline-block;
+     background:crimson;
+     color:white;
+}
+ 
+     /* Bilder und Videos */
+ img {
+     transition: 1s; 
+     flex-basis: 200px;
+     height: 180px;
+     filter: grayscale(70%);
+     padding: 30px;
+ }
+ 
+ img:hover {
+     transform: scale(1.4);
+     filter: grayscale(0%);
+ }
+ 
+ video {
+     width:320px;
+     height:210px;
+ }
+ 
+ iframe {
+     width: 95%;
+ }
+ 
+     /* Media-Queries */
+ @media (max-width: 600px) {
+     #container {
+         width: 350px;
+     }
+     
+     header {
+         width: 85%;
+         height: 250px;
+         margin: 0 auto;
+         padding-bottom: 30px;
+     }
+     
+     #name {
+         position: relative;
+         text-align: center;
+     }
+     
+     .fa {
+         padding: 10px;
+         font-size: 15px;
+         width: 15px;
+     }
+     
+     ul {
+         position: relative,
+         display: flex;
+         flex-flow: row wrap;
+     }
+     
+     ol {
+         position: relative,
+         display: flex;
+         flex-flow: row wrap;
+     }
+ }
+ 
+ @media (min-width: 600px) and (max-width: 1024px) { 
+      #container {
+         width: 450px;
+     }
+     
+      header {
+         width: 98%;
+         height: 150px;
+         margin: 0 auto;
+         padding-bottom: 30px;
+     }
+     
+     #name {
+         position: relative;
+         text-align: center;
+     }
+     
+     .fa {
+         padding: 15px;
+         font-size: 15px;
+         width: 15px;
+     }
+     
+     ul {
+         position: relative,
+         display: flex;
+         flex-flow: row wrap;
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+      #container {
+         width: 800px;
+     }
+     
+      header {
+         width: 85%;
+         height: 50px;
+         margin: 0 auto;
+         padding-bottom: 30px;
+     }
+ }
+ 
+ 
