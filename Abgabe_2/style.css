@@ -178,10 +178,6 @@ div > h3 {
      height:210px;
  }
  
- iframe {
-     width: 95%;
- }
- 
      /* Media-Queries */
  @media (max-width: 600px) {
      #container {
