@@ -40,6 +40,16 @@ div > h3 {
    color: black;
    font-family: 'Lobster', cursive;
 }
+
+q::before {
+    content: "«";
+    color: crimson;
+}
+
+q::after {
+    content: "»";
+    color: red;
+}
  
  #startseite {
      font-family: 'Times New Roman';
@@ -203,13 +213,13 @@ div > h3 {
      }
      
      ul {
-         position: relative,
+         position: relative;
          display: flex;
          flex-flow: row wrap;
      }
      
      ol {
-         position: relative,
+         position: relative;
          display: flex;
          flex-flow: row wrap;
      }
@@ -239,7 +249,7 @@ div > h3 {
      }
      
      ul {
-         position: relative,
+         position: relative;
          display: flex;
          flex-flow: row wrap;
      }
