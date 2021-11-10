@@ -48,7 +48,7 @@ q::before {
 
 q::after {
     content: "»";
-    color: red;
+    color: crimson;
 }
  
  #startseite {
