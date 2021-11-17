@@ -1,5 +1,5 @@
 "use strict";
-// -- [Aufgabe 1]
+// -- [Aufgabe 1] 
 /**
  * @var {number} age: Bitte anstatt der 24 dein Alter eintragen
  */
@@ -7,22 +7,28 @@ let age = 22;
 /**
  * @var {string} firstName: Bitte anstatt 'Max' deinen Vornamen eintragen
  */
-let firstName = `Lena`;
-function func1(age) {
-    return 2021 - age;
+/*let firstName: string = `Lena`;
+/*
+function func1(age: number): number {
+  return 2021 - age;
 }
-let output = func2(firstName);
-function func3(meal) {
-    console.log(`Ich esse gerne ${meal || "Pizza"}.`);
-    return func1(age) > 1995
-        ? `Ich gehöre zur Generation Z`
-        : `Ich gehöre zur Generation Y`;
+
+let output: string = func2(firstName);
+
+function func3(meal?: string): string {
+  console.log(`Ich esse gerne ${meal || "Pizza"}.`);
+  return func1(age) > 1995
+    ? `Ich gehöre zur Generation Z`
+    : `Ich gehöre zur Generation Y`;
 }
+
 console.log(output);
-function func2(name) {
-    console.log(`Ich heiße ${name}.`);
-    return func3();
+
+function func2(name: string): string {
+  console.log(`Ich heiße ${name}.`);
+  return func3();
 }
+*/
 /* -- HIER BITTE IHRE LÖSUNG ZUR AUFGABE 1 EINTRAGEN
  * Ich heiße Lena.
  * Ich esse gerne Pizza.
@@ -43,46 +49,96 @@ let events = [
 ];
 // -- HIER BITTE IHRE LÖSUNG ZUR AUFGABE 2 EINTRAGEN
 // Lösung a) 
+/*
 console.log(`Die Länge des Arrays beträgt ${events.length}.`);
-// Lösung b)
-console.log(`Mein Name ist ${events[0][0]} und der Ticketpreis beträgt ${events[0][1]}€.`);
-console.log(`Mein Name ist ${events[1][0]} und der Ticketpreis beträgt ${events[1][1]}€.`);
-console.log(`Mein Name ist ${events[2][0]} und der Ticketpreis beträgt ${events[2][1]}€.`);
-console.log(`Mein Name ist ${events[3][0]} und der Ticketpreis beträgt ${events[3][1]}€.`);
-console.log(`Mein Name ist ${events[4][0]} und der Ticketpreis beträgt ${events[4][1]}€.`);
-console.log(`Mein Name ist ${events[5][0]} und der Ticketpreis beträgt ${events[5][1]}€.`);
-console.log(`Mein Name ist ${events[6][0]} und der Ticketpreis beträgt ${events[6][1]}€.`);
-console.log(`Mein Name ist ${events[7][0]} und der Ticketpreis beträgt ${events[7][1]}€.`);
-console.log(`Mein Name ist ${events[8][0]} und der Ticketpreis beträgt ${events[8][1]}€.`);
-console.log(`Mein Name ist ${events[9][0]} und der Ticketpreis beträgt ${events[9][1]}€.`);
+*/
+// Lösung b) 
+/*
+for(let i= 0; i< events.length; i++){
+  console.log(events[i][0], events[i][1]);
+}
+*/
 // Lösung c) 
+/*
 let any = [10.1, 15.9, 20.1, 11.1, 12.2, 1.1, 12.99, 2.1, 3.1, 25.2];
 console.log(Math.max.apply(null, any));
-// Lösung d) ...
-// Lösung e)
-let _n = 10;
-let factorial = 1;
-while (_n >= 1) {
+*/
+//oder
+/*
+function maxPrice(array: any[][]): number {
+  let resultat= 0;
+  for(let i=0; i< array.length; i++){
+      if(array[i][1]> resultat) {
+        resultat= array[i][1];
+      }
+  }
+  return resultat;
+}
+
+let max= maxPrice(events);
+console.log(max);
+*/
+// Lösung d) 
+/*
+function interpretSearch (array: any[][], interpret: string): boolean {
+  for(let i=0; i< array.length; i++) {
+    if(array[i][0]== interpret) {
+        return true;
+    }
+  }
+  return false;
+}
+
+console.log(interpretSearch(events, "Michael Bublé"));
+*/
+// Lösung e) 
+/*
+let _n:number = 10;
+let factorial:number = 1;
+
+  while(_n >=1) {
     factorial = factorial * _n;
     _n--;
-}
+ }
 console.log(factorial);
+*/
 // Lösung f) 
-console.log(Array.from(Array(101).keys()));
-// Lösung g)
-class ConcertEvent {
-    interpret;
-    price;
-    constructor(_interpret, _price) {
-        this.interpret = _interpret;
-        this.price = _price;
-    }
-    show() {
-        console.log(`Interpret: ${this.interpret}, Price: ${this.price}`);
-    }
+/*
+for(let i= 1; i<=100; i++){
+  if(i % 3 == 0){
+    console.log(i);
+  }
 }
-let interpret1 = new ConcertEvent("Helene Fischer", 3.1);
+*/
+//oder
+/*
+let count: number= 0;
+for(let i= 1; i<=100; i++){
+  if(i % 3 == 0){
+    count++;
+    console.log(i);
+  }
+}
+console.log("count: ", count);
+*/
+// Lösung g) 
+/*
+ class ConcertEvent {
+  interpret: string;
+  price: number;
+
+  constructor(_interpret: string, _price: number) {
+    this.interpret = _interpret;
+    this.price = _price;
+  }
+
+  show(): void {
+    console.log(`Interpret: ${this.interpret}, Price: ${this.price}`);
+  }
+}
+let interpret1: ConcertEvent = new ConcertEvent("Helene Fischer", 3.1);
 interpret1.show();
+*/
 // Lösung h)
 class ConcertEvent {
     interpret;
@@ -98,10 +154,14 @@ class ConcertEvent {
 let interpret1 = new ConcertEvent("Mark Knopfler", 10.1);
 let interpret2 = new ConcertEvent("Pink Floyd", 15.9);
 let interpret3 = new ConcertEvent("Metallica", 20.1);
-let concertEventArray = [interpret1, interpret2];
-concertEventArray.push(interpret3);
-concertEventArray.push(new ConcertEvent("Michael Bublé", 11.1));
-for (let interpret of concertEventArray) {
-    interpret.show();
+let interpret4 = new ConcertEvent("Michael Bublé", 11.1);
+let interpret5 = new ConcertEvent("Dire Straits", 12.2);
+let interpret6 = new ConcertEvent("Mariah Carey", 1.1);
+let interpret7 = new ConcertEvent("Cat Stevens", 12.99);
+let interpret8 = new ConcertEvent("Mark Forster", 2.1);
+let interpret9 = new ConcertEvent("Helene Fischer", 3.1);
+let interpret10 = new ConcertEvent("Bee Gees", 25.2);
+for (let i = 0; i < events.length; i++) {
+    console.log(events[i][0], events[i][1]);
 }
 //# sourceMappingURL=script_vorlage.js.map
