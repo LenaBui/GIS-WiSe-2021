@@ -19,7 +19,7 @@ namespace testNamespace {
          
         let interpretValue: string = inputIntpret.value; 
         let priceValue: number = Number(inputPrice.value); 
-        let dateValue: Date = new Date();
+        let dateValue: Date = new Date(inputDate.value);
 
         let newElement: HTMLDivElement = document.createElement("div"); 
         let deleteButton: HTMLButtonElement = document.createElement ("button");
